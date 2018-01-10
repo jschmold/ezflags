@@ -10,7 +10,7 @@ let Flags = (function() {
             // Create the flag itself
             this.Value = 0
             // Do a bitwise op to generate the flag
-            let argval = 1 << key;
+            let argval = 1 << key
             // Create an object that allows you to more easily check your flags object
             this[arg] = {
                 "Value": argval,

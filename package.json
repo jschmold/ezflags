@@ -1,0 +1,20 @@
+{
+  "name": "ezflags",
+  "version": "1.0.1",
+  "description": "Simple flags for those unfamiliar with bitwise operations",
+  "main": "flags.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "flags",
+    "bitwise",
+    "ezflags"
+  ],
+  "author": "Jonathan Schmold",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
+}

@@ -9,6 +9,7 @@ describe('Flags', function() {
         })
         it('Should generate a usable class', function() {
             var obj = new MyFlags()
+            console.log(obj)
             assert(obj.FlagA !== undefined, 'Did not generate the flags as members')
         })
     })
@@ -31,6 +32,13 @@ describe('Flags', function() {
         })
         it('Should start with value 0', function() {
             assert(obj.Value === 0, 'Did not start with value 0')
+        })
+        it('Flag should be a boolean when needed', function() {
+            let backup = obj.Value
+            assert(obj.FlagA == false, "Was not the right type: (expected false)" + obj.FlagA)
+            obj.FlagA.Enable()
+            assert(obj.FlagA == true, "Was not the right type: (expected true)" + obj.FlagA)
+            obj.Value = backup
         })
     })
     describe('Functionality', function() {
@@ -78,6 +86,14 @@ describe('Flags', function() {
                 assert(testobj.FlagC.IsEnabled())
                 assert(!testobj.FlagB.IsEnabled(), 'Returned incorrect response on a never-enabled flag')
             })
+        })
+    })
+    describe('Ease of Use', function() {
+        it('Is a number when required', function() {
+            let testobj = new MyFlags();
+            testobj.FlagC.Enable()
+            let val = testobj + 4
+            assert(val === 8, `Returned ${val}, should be 8`)
         })
     })
 })

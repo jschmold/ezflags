@@ -5,7 +5,7 @@ Came across a need for bitwise flags, and decided to take the challenge to write
 ## Usage
 There are 3 easy steps to using this. First, create your Flags class.
 
-	const ABCFlags = new Flags('FlagA', 'FlagB', 'FlagC');
+	const ABCFlags = new Flags('FlagA', 'FlagB', 'FlagC')
 
 Step 2, create an instance of your Flags class
 

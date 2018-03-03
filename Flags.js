@@ -16,7 +16,7 @@ let Flags = (function() {
                 "Value": argval,
                 "Enable": () => this.Value = this.Value | argval,
                 "Disable": () => this.Value = this.Value & ~argval,
-                "IsEnabled": () => (this.Value & argval) == argval
+                "IsEnabled": () => (argval & this.Value) == argval
             }
         }
     })
